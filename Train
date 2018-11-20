@@ -1,21 +1,33 @@
-def loadData(file):
-    reviews=[]
+from sklearn.model_selection import train_test_split
+
+def loadData(file1, file2):
+    articles=[]
     labels=[]
-    f=open(file)
+    f=open(file1)
     for line in f:
-        review,rating=line.strip().split('\t')
-        reviews.append(review.lower())
-        labels.append(rating)
+        article,label=line.strip().split('\t')
+        articles.append(article.lower())
+        labels.append(label)
+    f2=open(file2)
+    for l2 in f2:
+        article,label=l2.strip().split('\t')
+        articles.append(article.lower())
+        labels.append(label)
     f.close()
-    return reviews,labels
+    return articles,labels
     
     
 if __name__=='__main__':
-    file='articles.txt'
-    liberal_rev_train,liberal_labels_train=loadData(file)
+    file1='Liberal_articles.txt'
+    file2='train_Fox.txt'
+    articles,labels=loadData(file1,file2)
+    articles_train, articles_test, labels_train, labels_test = train_test_split(articles, labels, test_size=0.25)
 
 
     counter = CountVectorizer(stop_words=None)
-    counts_train=counter.fit_transform(liberal_rev_train)
+    counts_train=counter.fit_transform(articles_train)
+    counts_test=counter.fit_transform(articles_test)
     
-    print(counts_train)
+    
+    
+    #print(counts_train)
