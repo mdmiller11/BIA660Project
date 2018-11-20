@@ -100,6 +100,11 @@ def countFreq(file):
     print(sortedByValue)
 '''
 
+if __name__=='__main__':
+    url='https://secondnexus.com/news/'
+    urls = getLinks(url) 
+    getText(urls)
+
 # file.close()
     
     
