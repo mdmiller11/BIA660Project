@@ -16,6 +16,6 @@ if __name__=='__main__':
 
 
     counter = CountVectorizer(stop_words=None)
-    counts_train=counter.fit_transform(rev_train)
+    counts_train=counter.fit_transform(liberal_rev_train)
     
     print(counts_train)
