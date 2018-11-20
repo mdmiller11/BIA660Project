@@ -77,7 +77,6 @@ def getText(urls): # function to get text from articles
     file.close() # add article text to the file along with its label
     
 # file = open('articles.txt')
-
 '''
 def countFreq(file):
     freq={}
@@ -100,40 +99,6 @@ def countFreq(file):
     sortedByValue=sorted(newFreq.items(),key=itemgetter(1),reverse=True)
     print(sortedByValue)
 '''
-def loadData(file):
-    reviews=[]
-    labels=[]
-    f=open(file)
-    for line in f:
-        review,rating=line.strip().split('\t')
-        reviews.append(review.lower())
-        labels.append(rating)
-    f.close()
-    return reviews,labels
-
-
-    
-'''
-get text from article
-get words from article that are in either dictionary
-count frequency of those words
-for each word, calculate which dictionary's frequency they are closer to
-keep a count for each dictionary
-the dictionary with the higher count of closer frequencies wins
-'''
-    
-if __name__=='__main__':
-    url='https://secondnexus.com/news/'
-    urls = getLinks(url) 
-    getText(urls)
-    file='articles.txt'
-    rev_train,labels_train=loadData(file)
-
-
-    counter = CountVectorizer(stop_words=None)
-    counts_train=counter.fit_transform(rev_train)
-    
-    print(counts_train)
 
 # file.close()
     
