@@ -48,7 +48,7 @@ def getLinks(url): # function to get article links from news pages
     return ArticleLinks 
     
 def getText(urls): # function to get text from articles
-    file=open('articles.txt','w') # new text file "articles.txt"
+    file=open('Liberal_articles.txt','w') # new text file "Liberal_articles.txt"
     for url in urls:
         allText = '' # string of all text from articles
         html=None
@@ -76,7 +76,7 @@ def getText(urls): # function to get text from articles
         file.write(allText.replace('\t',' ').replace('\n',' ')+'\t'+'Liberal'+'\n')
     file.close() # add article text to the file along with its label
     
-# file = open('articles.txt')
+# file = open('Liberal_articles.txt')
 '''
 def countFreq(file):
     freq={}
