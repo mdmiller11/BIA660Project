@@ -34,44 +34,41 @@ def getText(url):
     content2=articleBody.findAll('p')
     ret=""
     for i in content2:
-        ret = ret + i.text.strip('\n').strip('\t')
+        ret = ret + i.text.replace('\n', ' ').replace('\t', ' ')
         
     return ret
         
 def genLinks(url):
-    html=None
-    url='https://www.foxnews.com/politics'
+    html=None    
 
     #open the browser and visit the url
     driver = webdriver.Chrome('chromedriver.exe')
     driver.get(url)
     
-    #scroll down twice to load more tweets
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(2)
-    
     loadMore=driver.find_element_by_css_selector('div.button.load-more')
-    
+
     for i in range(10):
-        loadMore.click()
-        time.sleep(2)
-
+        try:
+            loadMore.click()
+            time.sleep(2)
+        except:
+            print(i)
+            break
+        
     html=driver.page_source
-    
-
-    #if not html: continue # couldnt get the page, ignore
-    #print(html)
-    #soup = BeautifulSoup(html.decode('ascii', 'ignore'),'html.parser') # parse the html 
     soup = BeautifulSoup(html,"lxml") # parse the html 
+##########################################
+
 
     fw = open('train_Fox.txt', 'w')
     article_list = soup.findAll('div', {'class':re.compile('content article-list')})
-    
+    print(len(article_list))
+    ret_text = ""
     for alist in article_list:
-        #print(len(alist))
+       
         articles = alist.findAll('article', {'class':re.compile('article')})
-        #print(articles[0])
-        ret_text = ""
+        print(len(articles))
+
         for article in articles:
             #print(article)
             if len(article['class']) > 1:
