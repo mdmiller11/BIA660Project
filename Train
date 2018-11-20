@@ -1,0 +1,21 @@
+def loadData(file):
+    reviews=[]
+    labels=[]
+    f=open(file)
+    for line in f:
+        review,rating=line.strip().split('\t')
+        reviews.append(review.lower())
+        labels.append(rating)
+    f.close()
+    return reviews,labels
+    
+    
+if __name__=='__main__':
+    file='articles.txt'
+    liberal_rev_train,liberal_labels_train=loadData(file)
+
+
+    counter = CountVectorizer(stop_words=None)
+    counts_train=counter.fit_transform(rev_train)
+    
+    print(counts_train)
