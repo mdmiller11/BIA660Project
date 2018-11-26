@@ -31,11 +31,15 @@ def getText(url):
     soup = BeautifulSoup(html.decode('ascii', 'ignore'),'html.parser') # parse the html 
     
     articleBody=soup.find('div', {'class':re.compile('article-body')}) # get all the review divs
-    content2=articleBody.findAll('p')
+    try:
+        content2=articleBody.findAll('p')
+    except:
+        return 
     ret=""
     for i in content2:
         ret = ret + i.text.replace('\n', ' ').replace('\t', ' ')
         
+    ret=re.sub('[^a-z]',' ',ret.lower()).strip()
     return ret
         
 def genLinks(url):
@@ -47,28 +51,26 @@ def genLinks(url):
     
     loadMore=driver.find_element_by_css_selector('div.button.load-more')
 
-    for i in range(10):
+    for i in range(30):
+        html=driver.page_source
         try:
-            loadMore.click()
-            time.sleep(2)
+            for j in range(10):
+                loadMore.click()
+                time.sleep(2)    
         except:
-            print(i)
+            print(i*10+j)
             break
-        
-    html=driver.page_source
     soup = BeautifulSoup(html,"lxml") # parse the html 
 ##########################################
 
 
-    fw = open('train_Fox.txt', 'w')
+    fw = open('train_Fox_op.txt', 'w')
     article_list = soup.findAll('div', {'class':re.compile('content article-list')})
     print(len(article_list))
     ret_text = ""
     for alist in article_list:
-       
         articles = alist.findAll('article', {'class':re.compile('article')})
         print(len(articles))
-
         for article in articles:
             #print(article)
             if len(article['class']) > 1:
@@ -80,12 +82,15 @@ def genLinks(url):
             link = "https://www.foxnews.com"+link
             #print(link)
             #print('\n')
-            ret_text=ret_text + getText(link) + '\t' + "Conservative" + '\n'
+            try:
+                ret_text=ret_text + getText(link) + '\t' + "Conservative" + '\n'
+            except:
+                continue
     fw.write(ret_text)
     fw.close()
 
 if __name__=='__main__':
     #url='https://www.foxnews.com/politics/house-democrats-reportedly-preparing-subpoena-cannon-for-trump-related-probes'
-    url_alist='https://www.foxnews.com/politics'
+    url_alist='https://www.foxnews.com/opinion'
     genLinks(url_alist)
 
