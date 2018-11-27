@@ -28,9 +28,10 @@ if __name__=='__main__':
     articles_train, articles_test, labels_train, labels_test = train_test_split(articles, labels, test_size=0.25)
 
 
-    counter = CountVectorizer(stop_words=None)
-    counts_train=counter.fit_transform(articles_train)
-    counts_test=counter.fit_transform(articles_test)
+    counter = CountVectorizer(stop_words='english')
+    counter.fit_transform(articles_train)
+    counts_train=counter.transform(articles_train)
+    counts_test=counter.transform(articles_test)
     
     #train classifier
     clf = MultinomialNB()
