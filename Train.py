@@ -4,6 +4,8 @@ import re
 from nltk.corpus import stopwords
 import requests
 from operator import itemgetter
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score
 
 
 def loadData(files):
@@ -20,9 +22,8 @@ def loadData(files):
     
     
 if __name__=='__main__':
-    file1='Liberal_articles.txt'
-    file2='train_Fox.txt'
-    files={'train_Fox.txt','Liberal_articles.txt'}
+
+    files={'train_Fox_pol.txt','Liberal_articles.txt'}
     articles,labels=loadData(files)
     articles_train, articles_test, labels_train, labels_test = train_test_split(articles, labels, test_size=0.25)
 
@@ -30,7 +31,18 @@ if __name__=='__main__':
     counter = CountVectorizer(stop_words=None)
     counts_train=counter.fit_transform(articles_train)
     counts_test=counter.fit_transform(articles_test)
-    print(labels_train)
+    
+    #train classifier
+    clf = MultinomialNB()
+    
+    #train all classifier on the same datasets
+    clf.fit(counts_train,labels_train)
+    
+    #use hard voting to predict (majority voting)
+    pred=clf.predict(counts_test)
+    
+    #print accuracy
+    print (accuracy_score(pred,labels_test))
     
     
     #print(counts_train)
