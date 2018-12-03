@@ -132,7 +132,28 @@ if __name__=='__main__':
     print("VT")
     print (accuracy_score(predVT,labels_test))
 
+    newfile='theblaze.txt'
+    f=open(newfile,'r')
+    c=f.read()
+    c=re.sub('[^0-9A-Za-z]',' ',c).strip()
+    c=c.replace('\n',' ')
+    c=c.lower()
+    clist=[]
+    clist.append(c)
+    ctest=counter.transform(clist)
+    print(clf.predict(ctest))
     
+    
+    newfile='newrepublic.txt'
+    f=open(newfile,'r')
+    d=f.read()
+    d=re.sub('[^0-9A-Za-z]',' ',d).strip()
+    d=d.replace('\n',' ')
+    d=d.lower()
+    dlist=[]
+    dlist.append(d)
+    dtest=counter.transform(dlist)
+    print(clf.predict(dtest))
 
     
     
