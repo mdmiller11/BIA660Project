@@ -39,7 +39,7 @@ def getText(url):
     for i in content2:
         ret = ret + i.text.replace('\n', ' ').replace('\t', ' ')
         
-    ret=re.sub('[^a-z]',' ',ret.lower()).strip()
+    ret=re.sub('[^0-9A-Za-z]',' ',ret).strip()
     return ret
         
 def genLinks(url):

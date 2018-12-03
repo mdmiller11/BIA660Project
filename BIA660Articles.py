@@ -20,10 +20,11 @@ from sklearn.feature_extraction.text import CountVectorizer
 url = 'https://secondnexus.com/news/'
 
 def getLinks(url): # function to get article links from news pages
-    pageNum=5 # number of pages to collect, 10 articles per page
+    pageNum=47 # number of pages to collect, 10 articles per page
     ArticleLinks = [] # list of article links
-    for p in range(1,pageNum+1): # for each page 
+    for p in range(47,pageNum+1): # for each page 
         html=None
+        print(p)
         if p==1: pageLink=url # url for page 1
         else: pageLink=url+'/page/'+str(p) # url for all other pages
         for i in range(5): # try 5 times
@@ -49,7 +50,9 @@ def getLinks(url): # function to get article links from news pages
     
 def getText(urls): # function to get text from articles
     file=open('Liberal_articles.txt','w') # new text file "Liberal_articles.txt"
+    p=0
     for url in urls:
+        print(p)
         allText = '' # string of all text from articles
         html=None
         pageLink=url 
@@ -73,7 +76,9 @@ def getText(urls): # function to get text from articles
             if include:
                 allText += t.text
             # take out "page 1 of..." at the end of each article 
+        allText=re.sub('[^0-9A-Za-z]',' ',allText.lower()).strip()
         file.write(allText.replace('\t',' ').replace('\n',' ')+'\t'+'Liberal'+'\n')
+        p+=1
     file.close() # add article text to the file along with its label
     
 # file = open('Liberal_articles.txt')
