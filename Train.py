@@ -130,49 +130,11 @@ if __name__=='__main__':
     VT.fit(counts_train,labels_train)
     predVT=VT.predict(counts_test)
     print("VT")
-    print (accuracy_score(predVT,labels_test))
+    print(accuracy_score(predVT,labels_test))
 
-    newfile='theblaze.txt'
-    f=open(newfile,'r',encoding='utf8',errors='ignore')
-    c=f.read()
-    c=re.sub('[^0-9A-Za-z]',' ',c).strip()
-    c=c.replace('\n',' ')
-    c=c.lower()
-    clist=[]
-    clist.append(c)
-    ctest=counter.transform(clist)
-    print(clf.predict(ctest))
-    
-    newfile='washingtontimes.txt'
-    f=open(newfile,'r',encoding='utf8',errors='ignore')
-    c2=f.read()
-    c2=re.sub('[^0-9A-Za-z]',' ',c2).strip()
-    c2=c2.replace('\n',' ')
-    c2=c2.lower()
-    c2list=[]
-    c2list.append(c2)
-    c2test=counter.transform(c2list)
-    print(clf.predict(c2test))
-    
-    
-    newfile='newrepublic.txt'
-    f=open(newfile,'r',encoding='utf8',errors='ignore')
-    d=f.read()
-    d=re.sub('[^0-9A-Za-z]',' ',d).strip()
-    d=d.replace('\n',' ')
-    d=d.lower()
-    dlist=[]
-    dlist.append(d)
-    dtest=counter.transform(dlist)
-    print(clf.predict(dtest))
-    
-    newfile='msnbc.txt'
-    f=open(newfile,'r',encoding='utf8',errors='ignore')
-    d2=f.read()
-    d2=re.sub('[^0-9A-Za-z]',' ',d2).strip()
-    d2=d2.replace('\n',' ')
-    d2=d2.lower()
-    d2list=[]
-    d2list.append(d2)
-    d2test=counter.transform(d2list)
-    print(clf.predict(d2test))
+    files={'Washington_Times_Articles.txt','New_Republic_Articles.txt'}
+    articles2,labels2=loadData(files)
+    counts2=counter.transform(articles2)
+    p2 = clf.predict(counts2)
+    print('Accuracy score with different sites:')
+    print(accuracy_score(p2,labels2))
