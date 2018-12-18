@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 12 16:54:33 2018
+Katie Gangeline, Matthew Miller
 
-@author: O345
+- Article collection from Fox News (Conservative)
 """
 
 from bs4 import BeautifulSoup
@@ -37,7 +37,9 @@ def getText(url):
         return 
     ret=""
     for i in content2:
-        ret = ret + i.text.replace('\n', ' ').replace('\t', ' ')
+        if i.text.contains("contributed to this report"):
+            continue
+        ret = ret + i.text.replace('\n', ' ').replace('\t', ' ').replace(' apos ','\'')
         
     ret=re.sub('[^0-9A-Za-z]',' ',ret).strip()
     return ret
@@ -64,7 +66,7 @@ def genLinks(url):
 ##########################################
 
 
-    fw = open('train_Fox_op.txt', 'w')
+    fw = open('train_Fox_pol2.txt', 'w')
     article_list = soup.findAll('div', {'class':re.compile('content article-list')})
     print(len(article_list))
     ret_text = ""
@@ -91,6 +93,6 @@ def genLinks(url):
 
 if __name__=='__main__':
     #url='https://www.foxnews.com/politics/house-democrats-reportedly-preparing-subpoena-cannon-for-trump-related-probes'
-    url_alist='https://www.foxnews.com/opinion'
+    url_alist='https://www.foxnews.com/politics'
     genLinks(url_alist)
 

@@ -1,0 +1,40 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf100
+{\fonttbl\f0\fnil\fcharset0 Georgia;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red255\green255\blue255;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;\cssrgb\c100000\c100000\c100000\c78039;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+They criticized President Trump\'92s tax cut bill as a giveaway to the rich, but now congressional Democrats are eyeing their own $620 billion tax break that would go heavily to wealthier Americans.\
+As they prepare to take control of the House, one high priority for Democrats from northeastern states is to look at rolling back the $10,000 limit on state and local tax deductions included in the Republicans\'92 2017 overhaul of the federal tax system.\
+But analysts say repealing the state and local tax limit is worth just dollars to the average middle-class taxpayer. For the wealthy, though, the proposal could lower tax bills by tens of thousands of dollars.\
+The Tax Policy Center recently found that more than 96 percent of the tax cuts that would come from repealing the cap would go to the top 20 percent of households in terms of income.\
+The left-leaning Institute on Taxation and Economic Policy concluded this month that 63 percent of the tax benefits that would result from axing the cap would go to the richest 1 percent of taxpayers.\
+Democrats say those wealthy folks deserve some relief and argue that they were targeted because they live in high-tax states where most voters are Democrats.\
+Rep. Richard E. Neal, the Massachusetts Democrat in line to chair the tax-writing Ways and Means Committee next year, said the state and local tax limit should be revisited as part of an overall examination of how Republicans\'92 law is working after one year.\
+\'93In a measured, judicious way, we should seek testimony from a wide variety of views as to the tax [law] itself,\'94 Mr. Neal said recently.\
+But Rep. Kevin Brady of Texas, the outgoing Republican chairman, said restoring the old law would mean a tax cut of about $10 for the middle class. Bills for millionaire households, Mr. Brady said, would be reduced by $140,000 a year.\
+\'93It is a huge tax cut for the wealthy,\'94 he said. \'93I do expect them to make a run at it.\'94\
+Democrats counter that while the rich may benefit the most, there are numerically more middle-class taxpayers who will end up ahead.\
+They pointed to IRS data that show nearly 90 percent of taxpayers who claim the state and local tax deduction make less than $200,000.\
+\'93It\'92s a big issue in many states across the country. It\'92s a real whack on middle-class families,\'94 said Sen. Robert Menendez, New Jersey Democrat and a member of the tax-writing Senate Finance Committee.\
+That was the same argument Republicans used in defending their overall tax cuts, which benefited nearly all Americans \'97 though the wealthiest did get more of a cut because they paid more in taxes already.\
+\'93Democrats and others widely derided the law after it passed for being a giveaway to the wealthy,\'94 said Steve Wamhoff, director of federal policy at the Institute on Taxation and Economic Policy. \'93Proposing to amend the tax law in a way that would primarily benefit the top 1 percent conflicts with the principles [Democrats] defined.\'94\
+Rep. Earl Blumenauer, Oregon Democrat and a Ways and Means member, said Democrats aren\'92t pledging to reverse the Republican tax cuts. He said they are only beginning to examine the effects of the 2017 law\'92s changes.\
+\'93There\'92s lots of studies \'97 that\'92s why you have hearings,\'94 said Mr. Blumenauer. \'93There are lots of people who have big property tax bills in red states who are going to get surprised and most of them are Republicans. There are more Republicans than Democrats in this country that are net losers.\'94\
+Democrats also say people are missing the big picture if they are looking only at the raw income distributions of who stands to benefit directly from fully restoring the deduction.\
+\'93That\'92s one side of the story \'97 eliminating the cap would benefit high-income people,\'94 said Frank Sammartino, a senior fellow at the Tax Policy Center. \'93From the states\'92 point of view, the other side of the story is this could jeopardize their ability to raise revenues, which are used for purposes that benefit low- and moderate-income families.\'94\
+Under the state and local tax deductions, individuals can deduct up to $10,000 from their federal returns for a combination of local taxes. Those can include property taxes and either income or sales taxes paid.\
+Republicans had long eyed the tax break as a perverse incentive to raise taxes, saying some lawmakers hike their own state and local rates with the knowledge that their residents could shift some of the bite to Uncle Sam.\
+Eliminating the 2017 state and local tax limit would punch a $620 billion hole in government finances over the next decade, according to a Tax Policy Center estimate.\
+Democrats do have options for covering that shortfall.\
+Sen. Chris Van Hollen, Maryland Democrat, pushed an amendment during the tax debate last year that would have paid for restoring the deduction by increasing taxes on money that corporations park overseas.\
+Mr. Van Hollen said another option would be to enact the \'93Buffett Rule,\'94 a minimum tax on the wealthy pushed by President Obama.\
+\'93There are ways you can address the issue and make sure you recapture some of the income to the extent it\'92s going to very wealthy people,\'94 Mr. Van Hollen said. \'93That\'92s one of our principles: is that we shouldn\'92t be providing big tax breaks to millionaires and we can accomplish that without hurting middle-class taxpayers.\'94\
+Tom Malinowski, a Democrat who won a House seat from New Jersey, said he has a pledge from Rep. Nancy Pelosi of California, Democrats\'92 House leader, to address the state and local tax issue next year. Mr. Malinowski said that pledge was crucial to getting him to support Mrs. Pelosi\'92s bid to become speaker of the House.\
+Mr. Malinowski won his seat by ousting Rep. Leonard Lance, a Republican who voted against his party\'92s tax law because he didn\'92t support the $10,000 cap.\
+}

@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf100
+{\fonttbl\f0\fnil\fcharset0 Georgia;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red255\green255\blue255;
+\red76\green187\blue248;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;\cssrgb\c100000\c100000\c100000\c78039;
+\cssrgb\c35294\c78431\c98039;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Top Democrats raised alarms about President Donald Trump's real estate dealings in Russia during the 2016 presidential campaign which he has characterized as "very legal & very cool."\
+Whether Trump's efforts toward inking the deal for a Trump Tower in Moscow was legal has yet to be determined, one key Democrat said, adding that it "certainly wasn't very cool." And another leading Democratic representative said the president's failure to disclose the business dealings gave Russia "leverage" over him.\
+Both Democrats and Republicans were asked during Sunday's slate of political talk shows about the president's former lawyer, Michael Cohen, pleading guilty on Thursday to a single count of {\field{\*\fldinst{HYPERLINK "https://www.justice.gov/file/1115596/download"}}{\fldrslt making false statements to Congress}} about a project to build a Trump Tower in Moscow.\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.nbcnews.com/meet-the-press/video/nadler-there-certainly-was-leverage-during-the-campaign-period-1386508867527"}}{\fldrslt \cf2 {{\NeXTGraphic 1x1.png \width20 \height20 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf2 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.nbcnews.com/politics/politics-news/former-trump-attorney-michael-cohen-pleads-guilty-lying-congress-n941616"}}{\fldrslt \cf2 In a charging document}}, special counsel Robert Mueller said Cohen lied to the Senate Select Committee on Intelligence in order to stick to the president's Russia narrative, minimizing links between the president and the Moscow project and giving the false impression that it ended before the Iowa caucuses in February 2016 when instead the attempt to lock down a deal continued until at least that summer.\
+{\field{\*\fldinst{HYPERLINK "https://www.nbcnews.com/politics/politics-news/former-trump-attorney-michael-cohen-pleads-guilty-lying-congress-n941616"}}{\fldrslt Trump}} responded by calling his ex-attorney a "weak person" who was "lying about a project that everybody knew about" in order to get a reduced sentence.\
+"I was running my business while I was campaigning," Trump told reporters Thursday. "There was a good chance that I wouldn\'92t have won, in which case I would have gone back into the business and why should I lose lots of opportunities?"\
+In a widely circulated {\field{\*\fldinst{HYPERLINK "https://twitter.com/realDonaldTrump/status/1068442531887632384"}}{\fldrslt tweet}} from Friday, the president added that his efforts to build a Russian building were "very legal & very cool."\
+Speaking with ABC's "{\field{\*\fldinst{HYPERLINK "https://abcnews.go.com/Politics/week-transcript-12-18-james-baker-colin-powell/story?id=59543297"}}{\fldrslt This Week}}" on Sunday, Democratic Rep. Adam Schiff of California, likely the incoming chairman of the House Intelligence Committee, responded to that tweet and Cohen's plea deal.\
+"Well whether it was legal or not remains to be seen," he said. "It certainly wasn\'92t very cool. More than that, it was very compromising of our country. In order for this Trump Tower deal to go through, sanctions had to be lifted on a Russian state bank."\
+Schiff said there was "no way to describe that as cool or ethical or in the national interest."\
+"It means that the president, whether he won or lost, was hoping to make money from Russia, was seeking at the same time to enlist the support of the Kremlin to make that money," he said, adding that the efforts were "so deeply compromising."\
+On NBC's "{\field{\*\fldinst{HYPERLINK "https://www.nbcnews.com/meet-the-press/meet-press-december-2-2018-n942761"}}{\fldrslt Meet the Press}}," Democratic Rep. Jerrold Nadler of New York, likely the incoming House Judiciary Chairman, criticized Trump for "lying to the American people about doing business in Russia," adding, that "the Kremlin knew he was lying gave the Kremlin a hold over him."\
+"And one question we have now is, 'Does the Kremlin still have hold over him, because of other lies that they know about?" Nadler said, adding, "There certainly was leverage during that, during the campaign period and until recently. Because they knew that he was lying."\
+Republicans pushed back on those assessments Sunday. Countering Nadler's points on "Meet the Press," Republican Sen. John Barrasso of Wyoming said it wasn't surprising the president was "doing international business" during the campaign.\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.nbcnews.com/meet-the-press/video/barrasso-trump-made-the-right-call-not-to-meet-with-putin-1386513475546"}}{\fldrslt \cf2 {{\NeXTGraphic 1x1.png \width20 \height20 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf2 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 Meanwhile, former Republican Gov. Pat McCrory of North Carolina said on "Meet the Press" that it's "not against the law" for Americans to do business in Russia. He called the allegation that Russia held leverage over Trump "a theory."\
+And on "This Week," former New Jersey Gov. Chris Christie, a Republican who worked closely with Trump during the campaign, brushed off the Cohen plea deal.\
+"It's a smoking gun of the fact that people lied in politics," he said. "You know, next thing we\'92re going to talk about is the smoking gun about the sun coming up."\
+Trump had insisted he did not have financial interests in Russia. In July 2016, then-candidate Trump said, "I will tell you, right now, zero, I have nothing to do with Russia, yes?"\
+Cohen's plea agreement indicated that he is cooperating with Mueller's office. Cohen, who was a vice president of the Trump Organization when he left the president's namesake business in May, first formally offered information to Mueller in early August and went on to speak with the special counsel's office six additional times.\
+In August, Cohen pleaded guilty in federal court to eight felony counts, two of which were related to hush-money payments Cohen said were made to women at the then-candidate's direction during the 2016 campaign to keep them from discussing affairs they said they had with Trump.\
+Cohen said in court at the time that those payments were made for the "principal purpose of influencing" the outcome of the election.\
+Allan Smith is a political reporter for NBC News.}

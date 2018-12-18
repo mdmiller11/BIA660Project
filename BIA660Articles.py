@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 12 17:46:06 2018
+Katie Gangeline, Matthew Miller
 
-@author: katieganeline
+- Article collection from Second Nexus (Liberal)
 """
 from bs4 import BeautifulSoup
 import re
@@ -74,6 +74,8 @@ def getText(urls): # function to get text from articles
             if 'Page 1 of' in t.text:
                 include = False
             if include:
+                if t.text.contains("pic.twitter"):
+                    continue
                 allText += t.text
             # take out "page 1 of..." at the end of each article 
         allText=re.sub('[^0-9A-Za-z]',' ',allText.lower()).strip()

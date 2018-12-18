@@ -9,15 +9,36 @@ from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.grid_search import GridSearchCV
 from sklearn.ensemble import VotingClassifier
+from nltk.stem import WordNetLemmatizer
+#import nltk
+from nltk import load
+import re
+from sklearn.feature_extraction import text 
+
+
+def lemmatize(article):    
+    _POS_TAGGER = 'taggers/maxent_treebank_pos_tagger/english.pickle'
+    tagger = load(_POS_TAGGER)
+    wnpos = lambda e: ('a' if e[0].lower() == 'j' else e[0].lower()) if e[0].lower() in ['n', 'r', 'v'] else 'n'
+    lemmatizer = WordNetLemmatizer()
+
+    words=article.split(' ')
+    tagged=tagger.tag(words)
+    words2 = [lemmatizer.lemmatize(t[0],wnpos(t[1])) for t in tagged]
+    ret=""
+    for i in words2:
+        ret += i + ' '
+    return ret
 
 def loadData(files):
     articles=[]
     labels=[]
     for file in files:
-        f=open(file)
+        f=open(file,'r',errors="ignore")
         for line in f:
             article,label=line.strip().split('\t')
             article=re.sub('[^0-9A-Za-z]',' ',article).strip()
+            #article=lemmatize(article)
             articles.append(article.lower())
             labels.append(label)
         f.close()
@@ -42,8 +63,9 @@ if __name__=='__main__':
     files={'lemmatized.txt'}
     articles,labels=loadData(files)
     articles_train, articles_test, labels_train, labels_test = train_test_split(articles, labels, test_size=0.25)
+    stopwordsextra=["fox","twitter", "pic","apos","com","http","contribute","associate","realdonaldtrump","2018the","2018"]
+    stop_words = text.ENGLISH_STOP_WORDS.union(stopwordsextra)
     
-
     counter = CountVectorizer(stop_words='english',ngram_range=(1,2))
     counter.fit_transform(articles_train)
     counts_train=counter.transform(articles_train)
@@ -90,7 +112,8 @@ if __name__=='__main__':
     clf4=RandomForestClassifier(n_estimators=500, max_depth=20, random_state=0,criterion='gini')
     
     clf4_fitted = classify(clf4,counts_train, labels_train, counts_test,labels_test,grid=None)
-        
+    clf4_fitted.feature_importances_
+    
 #==============================================================================
 #     RF_grid=[{'n_estimators': [100,500,1000],
 #               'max_depth': [10,20],
@@ -102,19 +125,21 @@ if __name__=='__main__':
     clf_Ada=AdaBoostClassifier(base_estimator=clf4, n_estimators=50, learning_rate=1.0)
     clfADA_fitted = classify(clf_Ada,counts_train, labels_train, counts_test,labels_test,grid=None)
 
-    #ANN
-    print("ANN")
-    clfANN = MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto',
-              beta_1=0.95, beta_2=0.9995, early_stopping=False,
-              epsilon=1e-08, hidden_layer_sizes=(100,10,10),
-              learning_rate='constant', learning_rate_init=0.015,
-              max_iter=3000, momentum=0.9,
-              nesterovs_momentum=True, power_t=0.5, random_state=9,
-              shuffle=True, solver='adam', tol=0.00001,
-              validation_fraction=0.1, verbose=False, warm_start=False)
-    
-    clfANN_fitted = classify(clfANN,counts_train, labels_train, counts_test,labels_test,grid=None)
-
+#==============================================================================
+#     #ANN
+#     print("ANN")
+#     clfANN = MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto',
+#               beta_1=0.95, beta_2=0.9995, early_stopping=False,
+#               epsilon=1e-08, hidden_layer_sizes=(100,10,10),
+#               learning_rate='constant', learning_rate_init=0.015,
+#               max_iter=3000, momentum=0.9,
+#               nesterovs_momentum=True, power_t=0.5, random_state=9,
+#               shuffle=True, solver='adam', tol=0.00001,
+#               validation_fraction=0.1, verbose=False, warm_start=False)
+#     
+#     clfANN_fitted = classify(clfANN,counts_train, labels_train, counts_test,labels_test,grid=None)
+# 
+#==============================================================================
     
 #==============================================================================
 #     ANN_grid=[{'learning_rate':['constant', 'invscaling', 'adaptive'],
@@ -131,10 +156,25 @@ if __name__=='__main__':
     predVT=VT.predict(counts_test)
     print("VT")
     print (accuracy_score(predVT,labels_test))
-
     
-    counts_CNN=counter.transform(articles_train)
+    files={'Washington_Times_Articles.txt','New_Republic_Articles.txt'}
+    articles2,labels2=loadData(files)
+    counts2=counter.transform(articles2)
+    p2 = clf_fitted.predict(counts2)
+    p3 = clf2_fitted.predict(counts2)
+    p4 = clf3_fitted.predict(counts2)
+    p5 = clf4_fitted.predict(counts2)
+    p6 = clfADA_fitted.predict(counts2)
+    p7 = VT.predict(counts2)
 
-    
+    print('Accuracy score with different sites:')
+    print(accuracy_score(p2,labels2))
+    print(accuracy_score(p3,labels2))
+    print(accuracy_score(p4,labels2))
+    print(accuracy_score(p5,labels2))
+    print(accuracy_score(p6,labels2))
+    print(accuracy_score(p7,labels2))
+
+
     
     

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Dec  3 01:15:34 2018
+Katie Gangeline, Matthew Miller
 
-@author: O345
+- lemmatization script
 """
 
 from nltk.stem import WordNetLemmatizer
